@@ -26,3 +26,7 @@ Documentation can be found from [Read the docs]. Source files can be found in th
 [Installation]: http://portia.readthedocs.org/en/latest/installation.html
 [Read the docs]: http://portia.readthedocs.org/en/latest/index.html
 [Scrapinghub]: https://portia.scrapinghub.com/
+
+# Fork changes
+
+This fork is a workaround (no fix) for https://github.com/scrapinghub/portia/issues/881
