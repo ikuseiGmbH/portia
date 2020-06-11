@@ -324,8 +324,12 @@ class Storage(object):
     def open(self, *args, **kwargs):
         """Open files from filesystem."""
         raw = kwargs.pop('raw', False)
-        with open(self._path(*args), encoding='utf-8') as f:
-            return decode(f.read()) if raw else json.load(f)
+        try:
+            with open(self._path(*args), encoding='UTF-8') as f:
+                return decode(f.read()) if raw else json.load(f)
+        except:
+            with open(self._path(*args), encoding='ISO-8859-15') as f:
+                return decode(f.read()) if raw else json.load(f)
 
 
 class SpiderLoader(object):
